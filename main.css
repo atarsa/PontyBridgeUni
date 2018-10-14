@@ -393,6 +393,10 @@ body {
   color: #fff;
 }
 
+.navbar.bottom {
+  background-color: #9A55B2;
+}
+
 /*
     =============================================
 
@@ -448,16 +452,23 @@ h3 {
 
 }
 
+.navbar.bottom {
+  height: 15vh;
+
+}
+
 .fixed {
   position: fixed;
 }
 
 .top {
   top: 0;
+  left: 0;
 }
 
 .bottom {
   bottom: 0;
+  left: 0;
 }
 
 /* Navigation list not displayed for mobile users */
@@ -473,6 +484,7 @@ h3 {
 
 }
 
+/* Hamburger menu bars */
 .bar {
   margin: 0.3em 0;
   width: 9vw;
@@ -480,9 +492,31 @@ h3 {
   background-color: #000;
 }
 
+/* Navigation menu list */
 li {
-  display: inline;
+  /* display: inline; */
   list-style: none;
+}
+
+.bottom ul {
+  float: left;
+  max-width: 35vw;
+  padding: 0;
+  margin: 1em.5em;
+
+}
+
+.bottom li {
+
+  padding: 0.3em 0;
+}
+
+
+.bottom h3 {
+  max-width: 40vw;
+  position: absolute;
+  bottom: 0.5em;
+  right: 0;
 }
 
 /*
