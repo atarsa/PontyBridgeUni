@@ -388,6 +388,7 @@ body {
   box-sizing: border-box;
 }
 
+
 .navbar {
   background-color: #791B99;
   color: #fff;
@@ -396,6 +397,9 @@ body {
 .navbar.bottom {
   background-color: #9A55B2;
 }
+
+
+
 
 /*
     =============================================
@@ -420,7 +424,7 @@ a {
 */
 .wrapper {
   width: 90vw;
-  margin: 10vh auto 0 auto;
+  margin: 12vh auto 0 auto;
   background-color: antiquewhite;
 }
 
@@ -441,6 +445,23 @@ h3 {
   max-width: 50vw;
   margin-left: 1em;
   margin-top: 1em;
+}
+
+/* TO DO: change for one class and add to html accordinly */
+.heading h1,
+.heading p,
+.study h2,
+.study p,
+.research h2,
+.research p {
+  padding: 0.5em;
+
+}
+
+.heading p,
+.study p,
+.research p {
+  text-align: justify;
 }
 
 /*
