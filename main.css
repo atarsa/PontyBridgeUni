@@ -413,6 +413,14 @@ a {
   color: #fff;
 }
 
+.study a,
+.research a,
+.news a {
+  color: #000;
+}
+
+.study a:hover,
+.research a:hover,
 .news a:hover {
   text-decoration: underline;
   color: #791B99;
