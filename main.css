@@ -637,7 +637,8 @@ li {
   Study
   ===============================================
 */
-.course {
+.course,
+.project {
   margin: 3em auto;
 }
 
@@ -646,3 +647,7 @@ li {
   Research
   ===============================================
 */
+.project img {
+  object-fit: contain;
+  background-color: #000;
+}
