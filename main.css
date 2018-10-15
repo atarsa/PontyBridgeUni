@@ -388,7 +388,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .navbar {
   background-color: #791B99;
   color: #fff;
@@ -459,6 +458,7 @@ a {
 .news-img-box {
   max-height: 12em;
   overflow: hidden;
+
 }
 
 .news {
@@ -589,6 +589,18 @@ li {
   Home
   ===============================================
 */
+
+/* Style for news section */
+.border h3 {
+  background-color: rgba(219, 195, 218, 0.5);
+  margin-top: 0;
+}
+
+.border {
+  border: 1px solid rgb(219, 195, 218);
+}
+
+/* Style for student quote section */
 .student-quote {
   background-color: rgba(219, 195, 218, 0.5);
   padding: 1em;
