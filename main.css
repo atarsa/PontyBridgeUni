@@ -437,11 +437,11 @@ a {
 .wrapper {
   width: 90vw;
   margin: 12vh auto 0 auto;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 
 .grid {
-  background-color: aqua;
+
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 1em;
@@ -459,6 +459,10 @@ a {
 .news-img-box {
   max-height: 12em;
   overflow: hidden;
+}
+
+.news {
+  margin-bottom: 2em;
 }
 
 /*
@@ -486,14 +490,17 @@ h3 {
 .study h2,
 .study p,
 .research h2,
-.research p {
+.research p,
+.news h3,
+.news p {
   padding: 0.5em;
 
 }
 
 .heading p,
 .study p,
-.research p {
+.research p,
+.news p {
   text-align: justify;
 }
 
@@ -582,7 +589,24 @@ li {
   Home
   ===============================================
 */
+.student-quote {
+  background-color: rgba(219, 195, 218, 0.5);
+  padding: 1em;
 
+}
+
+.student-quote q {
+  display: block;
+  margin-left: 2.5em;
+  padding: 0.5em 1em;
+  text-align: right;
+  font-style: italic;
+}
+
+.student-quote p {
+  color: #791B99;
+  font-weight: bold;
+}
 
 /*
   ===============================================
