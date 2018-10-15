@@ -428,6 +428,27 @@ a {
   background-color: antiquewhite;
 }
 
+.grid {
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1em;
+}
+
+/* make study and research img same height */
+.study-img-box,
+.research-img-box {
+  max-height: 13em;
+  overflow: hidden;
+
+}
+
+/* make news images same height */
+.news-img-box {
+  max-height: 12em;
+  overflow: hidden;
+}
+
 /*
   ===============================================
 
