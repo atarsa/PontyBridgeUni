@@ -397,7 +397,10 @@ body {
   background-color: #9A55B2;
 }
 
-
+.liliac-background {
+  background-color: rgb(230, 214, 229);
+  margin-top: 0;
+}
 
 
 /*
@@ -485,6 +488,7 @@ h3 {
 }
 
 /* TO DO: change for one class and add to html accordinly */
+.padding-05em,
 .heading h1,
 .heading p,
 .study h2,
@@ -497,11 +501,18 @@ h3 {
 
 }
 
+
+.justify,
 .heading p,
 .study p,
 .research p,
 .news p {
   text-align: justify;
+}
+
+.text-align-right {
+  text-align: right;
+
 }
 
 /*
@@ -598,6 +609,7 @@ li {
 
 .border {
   border: 1px solid rgb(219, 195, 218);
+  margin-top: 0;
 }
 
 /* Style for student quote section */
@@ -625,7 +637,9 @@ li {
   Study
   ===============================================
 */
-
+.course {
+  margin: 3em auto;
+}
 
 /*
   ===============================================
