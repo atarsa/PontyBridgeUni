@@ -451,18 +451,19 @@ a {
 
 /* make study and research img same height */
 .study-img-box,
-.research-img-box {
-  max-height: 13em;
+.research-img-box,
+.news-img-box {
+  max-height: 40vh;
   overflow: hidden;
 
 }
 
 /* make news images same height */
-.news-img-box {
+/* .news-img-box {
   max-height: 12em;
   overflow: hidden;
 
-}
+} */
 
 .news {
   margin-bottom: 2em;
@@ -547,8 +548,9 @@ h3 {
   left: 0;
 }
 
+
 /* Navigation list not displayed for mobile users */
-.is-displayed {
+.menu-list-displayed {
   display: none;
 }
 
@@ -569,11 +571,11 @@ h3 {
 }
 
 /* Navigation menu list */
-li {
-  /* display: inline; */
+/* li {
   list-style: none;
-}
+} */
 
+/*** Bottom navbar ***/
 .bottom ul {
   float: left;
   max-width: 35vw;
@@ -583,7 +585,6 @@ li {
 }
 
 .bottom li {
-
   padding: 0.3em 0;
 }
 
@@ -632,6 +633,11 @@ li {
   font-weight: bold;
 }
 
+/* Img of a student not displayed for mobile users  */
+.student-img-displayed {
+  display: none;
+}
+
 /*
   ===============================================
   Study
@@ -650,4 +656,45 @@ li {
 .project img {
   object-fit: contain;
   background-color: #000;
+}
+
+
+/* ====================
+    Media Quieries
+   ==================== */
+
+@media (min-width: 610px) {
+
+  /****************
+  Navbar 
+   ****************/
+  /* hide hamburger menu, show menu list */
+  .hamburger-menu {
+    display: none;
+  }
+
+  .flex-wrapper {
+    display: flex;
+  }
+
+  .navbar h3 {
+    width: 40vw;
+    align-self: center;
+    font-size: 1.5em;
+  }
+
+  .menu-list-displayed {
+    display: flex;
+    margin-right: 1em;
+    flex: 1 1 auto;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu-list-displayed li {
+    display: inline;
+
+  }
+
+
 }
