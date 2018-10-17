@@ -699,12 +699,14 @@ h3 {
 
 @media (min-width: 55em) {
   .wrapper {
-    max-width: 100vw;
+    max-width: 1170px;
+    margin: auto;
   }
 
   .grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(16em, auto);
+    grid-column-gap: 1em;
+    grid-auto-rows: auto;
 
 
   }
@@ -714,14 +716,23 @@ h3 {
     grid-column-end: 7;
   }
 
+  .heading img {
+    max-width: 1170px;
+    max-height: 50vh;
+  }
+
   .study {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
+    background-color: yellow;
+    border: 1px dashed black;
   }
 
   .research {
     grid-column-start: 4;
     grid-column-end: 7;
+    background-color: yellow;
+    border: 1px dashed black;
   }
 
   .student-quote {
@@ -737,12 +748,19 @@ h3 {
     flex: 1 1 auto;
   }
 
+  .study-img-box,
+  .research-img-box {
+    max-height: 260px;
+    max-width: 460px;
+  }
+
   .study-img-box img,
   .research-img-box img {
-    height: 30vh;
+    /* max-height: 260px;
+    max-width: 460px; */
+    background-color: #000;
+    object-fit: scale-down;
 
-
-    /* overflow: hidden; */
 
   }
 
