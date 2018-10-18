@@ -448,6 +448,12 @@ a {
   grid-row-gap: 1em;
 }
 
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
 /* make study and research img same height */
 .study-img-box,
 .research-img-box,
@@ -458,11 +464,11 @@ a {
 }
 
 /* make news images same height */
-/* .news-img-box {
-  max-height: 12em;
+.news-img-box {
+  max-height: 30vh;
   overflow: hidden;
 
-} */
+}
 
 .news {
   margin-bottom: 2em;
@@ -569,30 +575,28 @@ h3 {
   background-color: #000;
 }
 
-/* Navigation menu list */
-/* li {
-  list-style: none;
-} */
 
 /*** Bottom navbar ***/
+.bottom .flex-wrapper {
+  justify-content: space-between;
+}
+
 .bottom ul {
-  float: left;
-  max-width: 35vw;
   padding: 0;
-  margin: 1em.5em;
+  margin: 1em;
+  list-style-type: none;
 
 }
 
 .bottom li {
   padding: 0.3em 0;
+
 }
 
 
 .bottom h3 {
-  max-width: 40vw;
-  position: absolute;
-  bottom: 0.5em;
-  right: 0;
+  margin-right: 3em;
+  align-self: flex-end;
 }
 
 /*
@@ -602,12 +606,13 @@ h3 {
 */
 
 /* Style for news section */
-.border h3 {
+.news h3 {
   background-color: rgba(219, 195, 218, 0.5);
   margin-top: 0;
+  text-align: center;
 }
 
-.border {
+.news {
   border: 1px solid rgb(219, 195, 218);
   margin-top: 0;
 }
@@ -662,6 +667,7 @@ h3 {
     Media Quieries
    ==================== */
 
+
 @media (min-width: 600px) {
 
   /****************
@@ -672,14 +678,9 @@ h3 {
     display: none;
   }
 
-  .flex-wrapper {
-    display: flex;
-  }
-
-  .navbar h3 {
-    width: 40vw;
+  .navbar.top h3 {
+    width: 30vw;
     align-self: center;
-    font-size: 1.5em;
   }
 
   .menu-list-displayed {
@@ -697,18 +698,18 @@ h3 {
 
 }
 
+/******************
+  TABLETS
+  *****************/
 @media (min-width: 750px) {
-  .wrapper {
-    max-width: 1170px;
-    margin: auto;
-  }
 
+  /************
+  Grid
+  ************/
   .grid {
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 1em;
     grid-auto-rows: auto;
-
-
   }
 
   .heading {
@@ -716,44 +717,39 @@ h3 {
     grid-column-end: 7;
   }
 
-  .heading img {
-    max-width: 1170px;
-    max-height: 50vh;
-  }
-
   .study {
     grid-column-start: 1;
     grid-column-end: 4;
-    background-color: yellow;
-    border: 1px dashed black;
   }
 
   .research {
     grid-column-start: 4;
     grid-column-end: 7;
-    background-color: yellow;
-    border: 1px dashed black;
-  }
-
-  .study-img-box,
-  .research-img-box {
-    max-height: 260px;
-    max-width: 460px;
-  }
-
-  .study-img-box img,
-  .research-img-box img {
-    /* max-height: 260px;
-    max-width: 460px; */
-    background-color: #000;
-    object-fit: scale-down;
-
-
   }
 
   .student-quote {
     grid-column-start: 1;
     grid-column-end: 7;
+  }
+
+  /****
+    Homepage styles
+  *****/
+
+  .heading img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .study h2,
+  .research h2 {
+    background: rgba(241, 223, 241, 0.5);
+    margin: 0;
+  }
+
+  .study,
+  .research {
+    border: 1px solid rgba(219, 195, 218, 0.5);
   }
 
   .news-row {
@@ -763,7 +759,6 @@ h3 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
   }
 
   .news {
@@ -771,8 +766,6 @@ h3 {
     min-height: 100%;
     width: 32%;
     border: 1px solid rgba(219, 195, 218, 0.5);
-    ;
-
 
   }
 
@@ -787,4 +780,25 @@ h3 {
 
   }
 
+}
+
+/****************************
+  DESKTOP 
+ ****************************/
+@media (min-width: 1024px) {
+  .wrapper {
+    background-color: antiquewhite;
+    max-width: 1070px;
+  }
+
+  .flex-wrapper {
+    max-width: 1070px;
+    margin: auto;
+    justify-content: space-between;
+
+  }
+
+  /* .flex-wrapper h3 {
+    display: flex;
+  } */
 }
