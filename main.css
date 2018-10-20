@@ -380,6 +380,11 @@ template {
 
     ================================
 */
+:root {
+  --dark-purpurle: #791B99;
+  --light-purpurle: rgba(219, 195, 218, 0.5);
+}
+
 body {
   font-family: 'Quattrocento Sans', sans-serif;
 }
@@ -436,42 +441,71 @@ a {
 
    ==============================================
 */
+
+
 .wrapper {
-  width: 90vw;
+  max-width: 1040px;
   margin: 12vh auto 0 auto;
-  /* background-color: antiquewhite; */
+  background-color: antiquewhite;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 1em;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 3em;
+
 }
 
 .flex-wrapper {
+  max-width: 1040px;
   display: flex;
   justify-content: space-between;
   margin: auto;
 }
 
-/* make study and research img same height */
-.study-img-box,
-.research-img-box,
-.news-img-box {
-  max-height: 40vh;
-  overflow: hidden;
-
+/*******
+  Homepage Grid
+  *************/
+.heading {
+  grid-column: 1 / 7;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-/* make news images same height */
-.news-img-box {
-  max-height: 30vh;
-  overflow: hidden;
-
+.study {
+  grid-column: span 3;
 }
 
+.research {
+  grid-column: 4/7;
+}
+
+.student-quote {
+  grid-column: 1 / -1;
+}
+
+.news-1 {
+  grid-column: 1 /3;
+}
+
+.news-2 {
+  grid-column: 3 / 5;
+}
+
+.news-3 {
+  grid-column: 5 / 7;
+}
+
+img {
+  width: 100%;
+}
+
+.study,
+.research,
 .news {
-  margin-bottom: 2em;
+  display: grid;
+  grid-template-rows: 1fr minmax(160px, 0.5fr);
+
 }
 
 /*
@@ -604,11 +638,40 @@ h3 {
   Home
   ===============================================
 */
+/*********
+  Heading
+  *********/
+.welcome {
+  align-self: start;
+  margin-top: -2em;
+  background: yellowgreen;
+}
+
+.welcome p {
+  line-height: 1.5em;
+  align-self: stretch;
+}
+
+/*********
+ Research and study
+ ********/
+.research,
+.study {
+  border: 1px solid rgb(219, 195, 218);
+
+}
+
+.research h2,
+.study h2 {
+  align-self: end;
+  margin: 0;
+  /* background-color: var(--light-purpurle); */
+}
 
 /* Style for news section */
 .news h3 {
   background-color: rgba(219, 195, 218, 0.5);
-  margin-top: 0;
+  margin-top: 0em;
   text-align: center;
 }
 
@@ -696,153 +759,9 @@ h3 {
 
   }
 
-}
-
-/******************
-  TABLETS
-  *****************/
-@media (min-width: 750px) {
-
-  /************
-  Grid
-  ************/
-  .grid {
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 1em;
-    grid-auto-rows: auto;
-  }
-
-  .heading {
-    grid-column-start: 1;
-    grid-column-end: 7;
-  }
-
-  .study {
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
-
-  .research {
-    grid-column-start: 4;
-    grid-column-end: 7;
-  }
-
-  .student-quote {
-    grid-column-start: 1;
-    grid-column-end: 7;
-  }
-
-  /****
-    Homepage styles
-  *****/
-
-  .heading picture {
-    max-width: 90%;
-    height: auto;
-  }
-
-  .study h2,
-  .research h2 {
-    background: rgba(241, 223, 241, 0.5);
-    margin: 0;
-  }
-
-  .study,
-  .research {
-    border: 1px solid rgba(219, 195, 218, 0.5);
-  }
-
-  .news-row {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .news {
-    flex: 0 1 32%;
-    min-height: 100%;
-    width: 32%;
-    border: 1px solid rgba(219, 195, 218, 0.5);
-
-    display: flex;
-    flex-direction: column;
-  }
-
-  .news h3 {
-    background-color: rgba(219, 195, 218, 0.5);
-    margin-top: 0;
-    flex: 1 1 3.75em;
-
-  }
-
-  /* try to make equal h3
-  */
-  .news p {
-    flex-grow: 2;
-
-  }
-
-  .news-img-box img {
-    max-height: 30vh;
-
-
-  }
-
-}
-
-/****************************
-  DESKTOP 
- ****************************/
-@media (min-width: 1024px) {
-  .wrapper {
-    background-color: antiquewhite;
-    max-width: 1070px;
-  }
-
-  .flex-wrapper {
-    max-width: 1070px;
-    margin: auto;
-    justify-content: space-between;
-
-  }
-
-  /* To do:
-  - fix imgs and make them smaller,
-  - try without overflow: hidden
-  - add student photo
-  - .card class ?? 
-  - fix spacing, margins and padding- morw white spaces! */
-
-  /* Header photo */
-  .heading {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
-    background-color: #fff;
-    margin: 3em auto;
-  }
-
-  .heading img {
-    height: 60vh;
-
-    /* flex: 2 1 auto; */
-
-  }
-
-  .welcome {
-
-    /* flex: 1 1 0; */
-    align-self: center;
-    margin-top: -2em;
-    ;
-    /* background-color: aquamarine; */
-  }
-
-  .heading p {
-    padding-right: 2em;
+  /* Img of a student not displayed for mobile users  */
+  .student-img-displayed {
+    display: none;
   }
 
 }
