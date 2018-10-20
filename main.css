@@ -736,7 +736,7 @@ h3 {
     Homepage styles
   *****/
 
-  .heading img {
+  .heading picture {
     max-width: 90%;
     height: auto;
   }
@@ -775,17 +775,19 @@ h3 {
     background-color: rgba(219, 195, 218, 0.5);
     margin-top: 0;
     flex: 1 1 3.75em;
+
   }
 
   /* try to make equal h3
   */
   .news p {
-
     flex-grow: 2;
+
   }
 
   .news-img-box img {
     max-height: 30vh;
+
 
   }
 
@@ -807,7 +809,40 @@ h3 {
 
   }
 
-  /* .flex-wrapper h3 {
+  /* To do:
+  - fix imgs and make them smaller,
+  - try without overflow: hidden
+  - add student photo
+  - .card class ?? 
+  - fix spacing, margins and padding- morw white spaces! */
+
+  /* Header photo */
+  .heading {
     display: flex;
-  } */
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    background-color: #fff;
+    margin: 3em auto;
+  }
+
+  .heading img {
+    height: 60vh;
+
+    /* flex: 2 1 auto; */
+
+  }
+
+  .welcome {
+
+    /* flex: 1 1 0; */
+    align-self: center;
+    margin-top: -2em;
+    ;
+    /* background-color: aquamarine; */
+  }
+
+  .heading p {
+    padding-right: 2em;
+  }
+
 }
