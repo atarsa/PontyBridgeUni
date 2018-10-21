@@ -451,7 +451,7 @@ img {
   max-width: 1040px;
   display: grid;
   grid-gap: 50px;
-  margin: 12vh auto 0 auto;
+  margin: 12vh 5vw 0 5vw;
   background-color: antiquewhite;
 }
 
@@ -574,8 +574,6 @@ h3 {
 
 /* TO DO: change for one class and add to html accordinly */
 .padding-05em,
-.heading h1,
-.heading p,
 .study h2,
 .study p,
 .research h2,
@@ -588,7 +586,6 @@ h3 {
 
 
 .justify,
-.heading p,
 .study p,
 .research p,
 .news p {
@@ -632,18 +629,22 @@ h3 {
   left: 0;
 }
 
-
-/* Navigation list not displayed for mobile users */
 .menu-list-displayed {
-  display: none;
+  display: flex;
+  margin-right: 1em;
+  flex: 1 1 auto;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.hamburger-menu {
-  position: absolute;
-  top: 2vh;
-  right: 7vw;
-  display: inline-block;
+.menu-list-displayed li {
+  display: inline;
 
+}
+
+/* hide hamburger for desktop  */
+.hamburger-menu {
+  display: none;
 }
 
 /* Hamburger menu bars */
@@ -719,7 +720,6 @@ q {
 
 .student-quote q {
   display: block;
-  margin-left: 2.5em;
   padding: 0.5em 1em;
   text-align: right;
   font-style: italic;
@@ -729,11 +729,6 @@ q {
   color: #791B99;
   font-weight: bold;
 }
-
-/* Img of a student not displayed for mobile users  */
-/* .student-img-displayed {
-  display: none;
-} */
 
 
 /**************
@@ -754,8 +749,6 @@ q {
 .news-details {
   margin-top: -1.8em;
 }
-
-
 
 
 
@@ -785,38 +778,110 @@ q {
     Media Quieries
    ==================== */
 
+@media (max-width: 900px) {
+  .wrapper {
+    background-color: var(--dark-purpurle);
+  }
 
-@media (min-width: 600px) {
+  .top {
+    grid-template-areas:
+      "hero"
+      "hero-paragraph";
+  }
+
+  .hero h1 {
+    flex-grow: 1;
+  }
+
+  /*****.
+    don't display student photo on smaller screens
+    *******/
+  .student-quote {
+    display: grid;
+    grid-template-areas: "quote";
+
+  }
+
+  .student-img-displayed {
+    display: none;
+  }
+
+  .news-section {
+    grid-template-areas:
+      ". news-1 ."
+      ". news-2 ."
+      ". news-3 .";
+  }
+
+  .news {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media (max-width: 750px) {
 
   /****************
   Navbar 
    ****************/
   /* hide hamburger menu, show menu list */
+  .wrapper {
+    background-color: yellowgreen;
+  }
+
   .hamburger-menu {
+    position: absolute;
+    top: 2vh;
+    right: 7vw;
+    display: inline-block;
+
+  }
+
+  .menu-list-displayed {
     display: none;
   }
 
   .navbar.top h3 {
     width: 30vw;
     align-self: center;
+    background-color: #000;
   }
 
-  .menu-list-displayed {
-    display: flex;
-    margin-right: 1em;
-    flex: 1 1 auto;
-    justify-content: space-around;
-    align-items: center;
+  /******
+  main-section
+  ******** */
+  .main-section {
+    grid-template-areas:
+      "study"
+      "research";
   }
 
-  .menu-list-displayed li {
-    display: inline;
 
+  .study,
+  .research {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 
-  /* Img of a student not displayed for mobile users  */
-  /* .student-img-displayed {
-    display: none;
-  } */
 
+
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    margin: 12vh 1vw 0 1vw;
+  }
+
+  q {
+    font-size: 1.4em;
+  }
+
+  .student_quote_details p {
+    font-size: 1em;
+  }
+
+  .study,
+  .research {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
