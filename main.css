@@ -455,6 +455,13 @@ img {
   background-color: antiquewhite;
 }
 
+.flex-wrapper {
+  max-width: 1040px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
 /*******
   Homepage Grid
   *************/
@@ -544,14 +551,47 @@ img {
   grid-area: news-3;
 }
 
-
-
-.flex-wrapper {
-  max-width: 1040px;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
+/**********
+  Study page Grid
+  ***********/
+.study.wrapper {
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
 }
+
+.course {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.course-1,
+.course-3 {
+  background-color: pink;
+  grid-template-areas:
+    "course-img course-name"
+    "course-img course-p";
+
+}
+
+.course-2 {
+  grid-template-areas:
+    "course-name course-img"
+    "course-p course-img";
+}
+
+.course img {
+  grid-area: course-img;
+}
+
+.course h2 {
+  grid-area: course-name;
+}
+
+.course p {
+  grid-area: course-p;
+}
+
+
 
 /*
   ===============================================
@@ -848,7 +888,7 @@ q {
   }
 
   /******
-  main-section
+  homepage
   ******** */
   .main-section {
     grid-template-areas:
@@ -863,7 +903,15 @@ q {
     grid-template-columns: 2fr 1fr;
   }
 
-
+  /******
+  study page
+  ******** */
+  .course {
+    grid-template-areas:
+      "course-name"
+      "course-img"
+      "course-p";
+  }
 
 }
 
