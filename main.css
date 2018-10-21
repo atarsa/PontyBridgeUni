@@ -814,7 +814,7 @@ q {
   }
 
   .news {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -825,6 +825,7 @@ q {
    ****************/
   /* hide hamburger menu, show menu list */
   .wrapper {
+    margin: 12vh 2vw 0 2vw;
     background-color: yellowgreen;
   }
 
@@ -867,9 +868,7 @@ q {
 }
 
 @media (max-width: 600px) {
-  .wrapper {
-    margin: 12vh 1vw 0 1vw;
-  }
+
 
   q {
     font-size: 1.4em;
