@@ -10,29 +10,31 @@
 </head>
 
 <body>
-  <nav class="navbar fixed top flex-wrapper">
-    <h3><a href="index.html">University of PontyBridge</a></h3>
-    <!-- add/ make logo?? -->
-    <ul class="menu-list-displayed">
-      <li><a href="index.html" target="blank">About</a></li>
-      <li><a href="index.html#news">News</a></li>
-      <li><a href="study.html" target="blank">Study</a></li>
-      <li><a href="research.html" target="blank">Research</a></li>
-    </ul>
-    <!-- TO DO: add js to show menu on click/touch? -->
-    <div class="hamburger-menu">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+  <nav class="navbar fixed top">
+    <div class="flex-wrapper">
+      <h3><a href="index.html">University of PontyBridge</a></h3>
+      <!-- add/ make logo?? -->
+      <ul class="menu-list-displayed">
+        <li><a href="index.html" target="blank">About</a></li>
+        <li><a href="index.html#news">News</a></li>
+        <li><a href="study.html" target="blank">Study</a></li>
+        <li><a href="research.html" target="blank">Research</a></li>
+      </ul>
+      <!-- TO DO: add js to show menu on click/touch? -->
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </div>
   </nav>
 
-  <div class="wrapper">
+  <div class="research wrapper">
+    <div class="research-header">
+      <h1 class="padding-05em">Research</h1>
+    </div>
 
-    <h1 class="padding-05em">Research</h1>
-
-
-    <div class="project">
+    <div class="project item-1">
       <h2 class="text-align-right padding-05em">Project 1 </h2>
       <img sizes="(max-width: 1400px) 90vw, 1400px" srcset="
 img/research-1_rmtfbm_c_scale,w_200.jpg 200w,
@@ -49,8 +51,9 @@ img/research-1_rmtfbm_c_scale,w_1400.jpg 1400w"
         Duis hendrerit sapien est, eu
         lobortis odio aliquam in</p>
 
-    </div>
-    <div class="project ">
+    </div> <!-- end of item-1-->
+
+    <div class="project item-2">
       <h2 class="text-align-right padding-05em ">Project 2</h2>
       <img sizes="(max-width: 1400px) 90vw, 1400px" srcset="
 img/research-2_zwvocw_c_scale,w_200.jpg 200w,
@@ -68,8 +71,9 @@ img/research-2_zwvocw_c_scale,w_1400.jpg 1400w"
         Duis hendrerit sapien est, eu
         lobortis odio aliquam in</p>
 
-    </div>
-    <div class="project">
+    </div> <!-- end of item-2-->
+
+    <div class="project item-3">
       <h2 class="text-align-right">Project 3</h2>
       <img sizes="(max-width: 1400px) 90vw, 1400px" srcset="
 img/research-3_pizpbk_c_scale,w_200.jpg 200w,
@@ -87,17 +91,19 @@ img/research-3_pizpbk_c_scale,w_1400.jpg 1400w"
         Duis hendrerit sapien est, eu
         lobortis odio aliquam in</p>
 
-    </div>
+    </div> <!-- end of item-3-->
 
-  </div>
+  </div> <!-- end of .research.wrapper-->
 
   <footer class="navbar bottom">
-    <ul class="menu-list">
-      <li><a href="index.html" target="blank">About</a></li>
-      <li><a href="study.html" target="blank">Study</a></li>
-      <li><a href="research.html" target="blank">Research</a></li>
-    </ul>
-    <h3><a href="index.html">University of PontyBridge</a></h3>
+    <div class="flex-wrapper">
+      <ul class="menu-list">
+        <li><a href="index.html" target="blank">About</a></li>
+        <li><a href="study.html" target="blank">Study</a></li>
+        <li><a href="research.html" target="blank">Research</a></li>
+      </ul>
+      <h3><a href="index.html">University of PontyBridge</a></h3>
+    </div>
   </footer>
 </body>
 

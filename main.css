@@ -552,43 +552,50 @@ img {
 }
 
 /**********
-  Study page Grid
+  Study  and Research pages Grid
   ***********/
-.study.wrapper {
+.study.wrapper,
+.research.wrapper {
   grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 
-.course {
+.course,
+.project {
   display: grid;
   grid-gap: 20px;
 }
 
-.course-1,
-.course-3 {
+.item-1,
+.item-3 {
   background-color: pink;
   grid-template-areas:
-    "course-img course-name"
-    "course-img course-p";
+    "item-img item-name"
+    "item-img item-p";
 
 }
 
-.course-2 {
+.item-2,
+.project-2 {
+  background-color: sandybrown;
   grid-template-areas:
-    "course-name course-img"
-    "course-p course-img";
+    "item-name item-img"
+    "item-p item-img";
 }
 
-.course img {
-  grid-area: course-img;
+.course img,
+.research img {
+  grid-area: item-img;
 }
 
-.course h2 {
-  grid-area: course-name;
+.course h2,
+.research h2 {
+  grid-area: item-name;
 }
 
-.course p {
-  grid-area: course-p;
+.course p,
+.research p {
+  grid-area: item-p;
 }
 
 
@@ -906,12 +913,14 @@ q {
   /******
   study page
   ******** */
-  .course {
+  .course,
+  .project {
     grid-template-areas:
-      "course-name"
-      "course-img"
-      "course-p";
+      "item-name"
+      "item-img"
+      "item-p";
   }
+
 
 }
 
