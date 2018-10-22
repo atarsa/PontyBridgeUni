@@ -511,7 +511,8 @@ img {
   display: grid;
   grid-gap: 2em;
   grid-template-areas:
-    ". study research .";
+    " study research ";
+  margin: 1em;
 }
 
 .study {
@@ -527,6 +528,7 @@ img {
   grid-template-areas:
     " quote quote quote student-img ";
   grid-gap: 1em;
+  margin: 1em;
 }
 
 .student_quote_details {
@@ -549,6 +551,7 @@ img {
   grid-template-areas:
     ". news-1 news-2 news-3 .";
   grid-gap: 1em;
+  margin-bottom: 3em;
 }
 
 .news-1 {
@@ -661,7 +664,7 @@ h3 {
 .navbar {
   position: relative;
   width: 100vw;
-  min-height: 10vh;
+  min-height: 8vh;
 
 }
 
@@ -682,6 +685,7 @@ h3 {
 .bottom {
   bottom: 0;
   left: 0;
+  right: 0;
 }
 
 .top h3 {
@@ -806,19 +810,36 @@ q {
  **************/
 .news {
   display: grid;
-  border: 1px solid rgb(219, 195, 218);
-  /* margin-bottom: 5em; */
+  grid-template-areas:
+    "news-img"
+    "news-img"
+    "news-details";
+
 }
 
+.news-img-box {
+  grid-area: news-img;
+  width: 19.5em;
+  overflow: hidden;
+}
 
-.news h3 {
-  background: var(--dark-purpurle);
-  text-align: center;
+.news-img-box img {
+  width: 100%;
 }
 
 .news-details {
-  /* margin-top: -1.8em; */
+  grid-area: news-details;
 }
+
+.news h3 {
+
+  border-bottom: 2px solid var(--dark-purpurle);
+  justify-items: start;
+  align-content: start;
+  margin: 0;
+}
+
+
 
 
 
@@ -848,7 +869,7 @@ q {
     Media Quieries
    ==================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
   .welcome {
     grid-template-areas:
@@ -876,12 +897,17 @@ q {
       ". news-2 ."
       ". news-3 .";
 
+
   }
 
   .news {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
+  .news-img-box {
+    background-color: #000;
+    width: 100%;
+  }
 }
 
 @media (max-width: 750px) {
@@ -950,8 +976,9 @@ q {
   }
 
   .hero {
-    min-height: 25em;
+    min-height: 20em;
     background: white url(img/univesity-building_na0ooe_ar_4_3\,c_fill\,g_auto__c_scale\,w_509.jpg);
+    background-size: cover;
   }
 
   q {
@@ -970,5 +997,6 @@ q {
 
   .news {
     grid-template-columns: 1fr;
+
   }
 }
