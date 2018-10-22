@@ -548,7 +548,7 @@ img {
   display: grid;
   grid-template-areas:
     ". news-1 news-2 news-3 .";
-  grid-gap: 0.5em;
+  grid-gap: 1em;
 }
 
 .news-1 {
@@ -661,12 +661,12 @@ h3 {
 .navbar {
   position: relative;
   width: 100vw;
-  height: 10vh;
+  min-height: 10vh;
 
 }
 
 .navbar.bottom {
-  height: 15vh;
+  min-height: 15vh;
 
 }
 
@@ -800,7 +800,6 @@ q {
   font-weight: bold;
 }
 
-.student-quote img {}
 
 /**************
   news section 
@@ -818,7 +817,7 @@ q {
 }
 
 .news-details {
-  margin-top: -1.8em;
+  /* margin-top: -1.8em; */
 }
 
 
@@ -850,9 +849,6 @@ q {
    ==================== */
 
 @media (max-width: 900px) {
-  .wrapper {
-    background-color: var(--light-purpurle);
-  }
 
   .welcome {
     grid-template-areas:
@@ -860,9 +856,6 @@ q {
       " hero-paragraph ";
   }
 
-  .hero h1 {
-    flex-grow: 1;
-  }
 
   /*****.
     don't display student photo on smaller screens
@@ -951,12 +944,18 @@ q {
 }
 
 @media (max-width: 600px) {
+  .navbar h3 {
+    font-size: 1em;
+    max-width: 40vw;
+  }
+
   .hero {
-    min-height: 250px;
+    min-height: 25em;
+    background: white url(img/univesity-building_na0ooe_ar_4_3\,c_fill\,g_auto__c_scale\,w_509.jpg);
   }
 
   q {
-    font-size: 1.4em;
+    font-size: 1em;
   }
 
   .student_quote_details p {
