@@ -901,12 +901,20 @@ q {
   }
 
   .news {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(350px, 400px) 1fr;
+    grid-gap: 1em;
+
   }
 
   .news-img-box {
-    background-color: #000;
+    grid-column: 1 / 2;
     width: 100%;
+
+  }
+
+  .news-details {
+    grid-column: 2 / 3;
+    grid-row: 1;
   }
 }
 
@@ -997,6 +1005,16 @@ q {
 
   .news {
     grid-template-columns: 1fr;
+  }
 
+  .news-img-box {
+    grid-column: 1 / 2;
+    width: 100%;
+
+  }
+
+  .news-details {
+    grid-column: 1 / 1;
+    grid-row: 3;
   }
 }
