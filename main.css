@@ -389,7 +389,6 @@ body {
   font-family: 'Quattrocento Sans', sans-serif;
   font-size: 16px;
 
-  /* margin: 0 auto; */
 }
 
 * {
@@ -452,9 +451,9 @@ img {
 .wrapper {
   max-width: 1040px;
   display: grid;
-  grid-gap: 2em;
-  margin: 12vh auto 0 auto;
-  background-color: antiquewhite;
+  grid-gap: 4em;
+  margin: 15vh auto 0 auto;
+
 }
 
 .flex-wrapper {
@@ -462,6 +461,7 @@ img {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
   margin: auto;
 
 }
@@ -473,9 +473,10 @@ img {
 .welcome {
   display: grid;
   grid-template-areas:
-    "hero hero hero-paragraph"
-    "hero hero hero-paragraph";
-  grid-gap: 20px;
+    ". hero hero ."
+    ". hero hero . "
+    ". hero-paragraph hero-paragraph .";
+  grid-gap: 2em;
 }
 
 .hero {
@@ -484,29 +485,33 @@ img {
   min-height: 400px;
   background-size: cover;
   background-position: center right;
-  color: white;
+  color: #000;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
 }
 
 .hero h1 {
+  flex-grow: 1;
   margin-bottom: 0;
   padding: 0.5em;
-  background-color: var(--light-purpurle);
+  background-color: rgba(245, 245, 245, 0.9);
 }
 
 .hero-paragraph {
   grid-area: hero-paragraph;
   display: grid;
   align-content: end;
+  padding: 1em;
   font-size: 1.5em;
 }
 
 .main-section {
   display: grid;
   grid-gap: 2em;
-  grid-template-areas: "study research";
+  grid-template-areas:
+    ". study research .";
 }
 
 .study {
@@ -519,7 +524,8 @@ img {
 
 .student-quote {
   display: grid;
-  grid-template-areas: "quote quote quote student-img";
+  grid-template-areas:
+    " quote quote quote student-img ";
   grid-gap: 1em;
 }
 
@@ -534,12 +540,14 @@ img {
   grid-area: student-img;
   max-height: 200px;
   border-radius: 50%;
+  border: 5px solid var(--dark-purpurle);
   justify-self: center;
 }
 
 .news-section {
   display: grid;
-  grid-template-areas: "news-1 news-2 news-3";
+  grid-template-areas:
+    ". news-1 news-2 news-3 .";
   grid-gap: 0.5em;
 }
 
@@ -574,8 +582,8 @@ img {
 .item-3 {
   background-color: pink;
   grid-template-areas:
-    "item-img item-name"
-    "item-img item-p";
+    ". item-img item-name ."
+    ". item-img item-p .";
 
 }
 
@@ -583,8 +591,8 @@ img {
 .project-2 {
   background-color: sandybrown;
   grid-template-areas:
-    "item-name item-img"
-    "item-p item-img";
+    ". item-name item-img ."
+    ". item-p item-img .";
 }
 
 .course img,
@@ -617,12 +625,7 @@ h3 {
   font-family: 'Quattrocento', serif;
 }
 
-.navbar h3 {
-  flex: 1 1 0;
-  max-width: 50vw;
-  margin-left: 1em;
-  margin-top: 1em;
-}
+
 
 /* TO DO: change for one class and add to html accordinly */
 .padding-05em,
@@ -681,10 +684,17 @@ h3 {
   left: 0;
 }
 
+.top h3 {
+  flex: 1 1 0;
+  max-width: 50vw;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
 .menu-list-displayed {
   flex: 1 1 0;
   display: flex;
-  margin-right: 1em;
+  margin-right: 2em;
   justify-content: space-between;
   align-items: center;
   font-size: 1.2em;
@@ -710,15 +720,12 @@ h3 {
 
 
 /*** Bottom navbar ***/
-.bottom .flex-wrapper {
-  justify-content: space-between;
-}
+
 
 .bottom ul {
   padding: 0;
   margin: 1em;
   list-style-type: none;
-
 }
 
 .bottom li {
@@ -726,16 +733,26 @@ h3 {
 
 }
 
-
 .bottom h3 {
-  margin-right: 3em;
+  flex: 1 1 auto;
+  max-width: 30vw;
+  text-align: right;
+  margin-right: 2em;
   align-self: flex-end;
+
 }
 
 /*
   ===============================================
   Home
   ===============================================
+/********
+ header
+ *********/
+/* .hero-paragraph p {
+  text-indent: 0.5em;
+
+} */
 
 /*********
  Research and study
@@ -783,6 +800,7 @@ q {
   font-weight: bold;
 }
 
+.student-quote img {}
 
 /**************
   news section 
@@ -838,8 +856,8 @@ q {
 
   .welcome {
     grid-template-areas:
-      "hero"
-      "hero-paragraph";
+      " hero "
+      " hero-paragraph ";
   }
 
   .hero h1 {
@@ -881,7 +899,6 @@ q {
   /* hide hamburger menu, show menu list */
   .wrapper {
     margin: 12vh 2vw 0 2vw;
-    background-color: yellowgreen;
   }
 
   .hamburger-menu {
@@ -907,8 +924,8 @@ q {
   ******** */
   .main-section {
     grid-template-areas:
-      "study"
-      "research";
+      "study "
+      "research ";
   }
 
 
@@ -925,9 +942,9 @@ q {
   .course,
   .project {
     grid-template-areas:
-      "item-name"
-      "item-img"
-      "item-p";
+      ". item-name ."
+      ". item-img ."
+      ". item-p .";
   }
 
 
