@@ -632,9 +632,9 @@ h3 {
 
 /* TO DO: change for one class and add to html accordinly */
 .padding-05em,
-.study h2,
+.study h3,
 .study p,
-.research h2,
+.research h3,
 .research p,
 .news h3,
 .news p {
@@ -761,36 +761,18 @@ h3 {
 /*********
  Research and study
  ********/
+
 .research,
 .study {
-  display: grid;
-  grid-template-areas:
-    "-img"
-    "-details";
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  justify-content: space-between;
 
 }
 
-.research-img-box,
-.study-img-box {
-  grid-area: -img;
-  height: 14em;
-  overflow: hidden;
-}
-
-.research-details,
-.study-details {
-  grid-area: -details;
-}
-
-/* .research-img-box img,
-.study-img-box img {
-  overflow: hidden;
-  width: 100%
-} */
-
-.research h2,
-.study h2 {
-
+.research h3,
+.study h3 {
   border-bottom: 2px solid var(--dark-purpurle);
 
 
@@ -978,10 +960,9 @@ q {
   }
 
 
-  .study,
-  .research {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+  .study img,
+  .research img {
+    width: 100%;
   }
 
 
@@ -1017,12 +998,6 @@ q {
 
   .student_quote_details p {
     font-size: 1em;
-  }
-
-  .study,
-  .research {
-    display: grid;
-    grid-template-columns: 1fr;
   }
 
   .news {
