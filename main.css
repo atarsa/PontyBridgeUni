@@ -460,7 +460,6 @@ img {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-
   margin: auto;
 
 }
@@ -580,7 +579,6 @@ img {
   display: grid;
   grid-column-gap: 2rem;
 
-
 }
 
 .item-1,
@@ -600,17 +598,17 @@ img {
 }
 
 .course img,
-.research img {
+.project img {
   grid-area: item-img;
 }
 
 .course h2,
-.research h2 {
+.project h2 {
   grid-area: item-name;
 }
 
 .course p,
-.research p {
+.project p {
   grid-area: item-p;
 }
 
@@ -845,12 +843,11 @@ q {
 
 /*
   ===============================================
-  Study
+  Study and Research Pages
   ===============================================
 */
 .course,
 .project {
-
   margin: 4rem auto;
   justify-items: end;
   align-items: center;
@@ -864,9 +861,10 @@ q {
 }
 
 .course p,
-.course h2 {
+.course h2,
+.project p,
+.project h2 {
   padding-right: 1em;
-
 
 }
 
@@ -878,15 +876,6 @@ q {
 
 }
 
-/*
-  ===============================================
-  Research
-  ===============================================
-*/
-.project img {
-  object-fit: contain;
-  background-color: #000;
-}
 
 
 /* ====================
@@ -1047,4 +1036,6 @@ q {
     grid-column: 1 / 1;
     grid-row: 3;
   }
+
+
 }
