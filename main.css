@@ -578,24 +578,25 @@ img {
 .course,
 .project {
   display: grid;
-  grid-gap: 20px;
+  grid-column-gap: 2rem;
+
+
 }
 
 .item-1,
 .item-3 {
-  background-color: pink;
+
   grid-template-areas:
-    ". item-img item-name ."
-    ". item-img item-p .";
+    " item-img item-img item-name "
+    " item-img item-img item-p ";
 
 }
 
 .item-2,
 .project-2 {
-  background-color: sandybrown;
   grid-template-areas:
-    ". item-name item-img ."
-    ". item-p item-img .";
+    " item-name item-img item-img "
+    " item-p item-img item-img ";
 }
 
 .course img,
@@ -842,10 +843,6 @@ q {
 }
 
 
-
-
-
-
 /*
   ===============================================
   Study
@@ -853,7 +850,32 @@ q {
 */
 .course,
 .project {
-  margin: 3em auto;
+
+  margin: 4rem auto;
+  justify-items: end;
+  align-items: center;
+
+}
+
+.course img,
+.project img {
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.course p,
+.course h2 {
+  padding-right: 1em;
+
+
+}
+
+.item-2 h2,
+.item-2 p {
+  padding-left: 1em;
+  justify-self: start;
+  text-align: left;
+
 }
 
 /*
@@ -975,6 +997,19 @@ q {
       ". item-p .";
   }
 
+  .course,
+  .project {
+
+    margin: 2rem auto;
+    justify-items: start;
+    align-items: center;
+
+  }
+
+  .course p,
+  .project p {
+    padding: 0;
+  }
 
 }
 
