@@ -763,15 +763,37 @@ h3 {
  ********/
 .research,
 .study {
-  border: 1px solid rgb(219, 195, 218);
+  display: grid;
+  grid-template-areas:
+    "-img"
+    "-details";
 
 }
 
+.research-img-box,
+.study-img-box {
+  grid-area: -img;
+  height: 14em;
+  overflow: hidden;
+}
+
+.research-details,
+.study-details {
+  grid-area: -details;
+}
+
+/* .research-img-box img,
+.study-img-box img {
+  overflow: hidden;
+  width: 100%
+} */
+
 .research h2,
 .study h2 {
-  align-self: end;
-  margin: 0;
-  /* background-color: var(--light-purpurle); */
+
+  border-bottom: 2px solid var(--dark-purpurle);
+
+
 }
 
 /*********
