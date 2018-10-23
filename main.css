@@ -372,7 +372,6 @@ template {
 
 /** END OF NORMALISE.CSS **/
 
-/** Mobile first approach */
 /*
     ===============================
 
@@ -569,8 +568,9 @@ img {
 /**********
   Study  and Research pages Grid
   ***********/
-.study.wrapper,
-.research.wrapper {
+.study_page.wrapper,
+.research_page.wrapper {
+  display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
 }
@@ -774,8 +774,6 @@ h3 {
 .research h3,
 .study h3 {
   border-bottom: 2px solid var(--dark-purpurle);
-
-
 }
 
 /*********
