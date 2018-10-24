@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans" rel="stylesheet">
   <title>University of PontyBridge </title>
@@ -14,19 +16,27 @@
     <div class="flex-wrapper">
       <h3><a href="index.html">University of PontyBridge</a></h3>
       <!-- add/ make logo?? -->
-      <ul class="menu-list-displayed">
-        <li><a href="index.html" target="blank">About</a></li>
-        <li><a href="index.html#news">News</a></li>
-        <li><a href="study.html" target="blank">Study</a></li>
-        <li><a href="research.html" target="blank">Research</a></li>
+      <ul id="menu" class="menu-list-displayed " onclick="displayMenu()">
+        <li>
+          <a href="index.html" target="blank">About</a>
+        </li>
+        <li>
+          <a href="index.html#news">News</a>
+        </li>
+        <li>
+          <a href="study.html" target="blank">Study</a>
+        </li>
+        <li>
+          <a href="research.html" target="blank">Research</a>
+        </li>
       </ul>
-      <!-- TO DO: add js to show menu on click/touch? -->
-      <div class="hamburger-menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-    </div>
+
+      <!-- bars icon from fontawsome.com
+        https://fontawesome.com/icons/bars?style=solid
+      accesssed 24/10/2018 -->
+      <div class="hamburger-menu" onclick="displayMenu()">
+        <i class="fas fa-bars"></i></div>
+    </div> <!-- end of .flex-wrapper-->
   </nav>
 
   <div class="research_page wrapper">
@@ -129,6 +139,8 @@ img/research-1a_ihboyv_ar_2_1,c_fill,g_auto__c_scale,w_700.jpg 700w"
       <h3><a href="index.html">University of PontyBridge</a></h3>
     </div>
   </footer>
+
+  <script src="scripts.js"></script>
 </body>
 
 </html>

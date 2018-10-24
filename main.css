@@ -936,9 +936,14 @@ q {
   /****************
   Navbar 
    ****************/
-  /* hide hamburger menu, show menu list */
+
   .wrapper {
     margin: 12vh 2vw 0 2vw;
+  }
+
+  /* hide menu list, show hamburger menu */
+  .menu-list-displayed {
+    display: none;
   }
 
   .hamburger-menu {
@@ -946,11 +951,17 @@ q {
     top: 2vh;
     right: 7vw;
     display: inline-block;
-
   }
 
-  .menu-list-displayed {
-    display: none;
+  .show-menu {
+    display: grid;
+    position: absolute;
+    top: 6vh;
+    width: 100vw;
+    height: 50vh;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    background-color: var(--dark-purpurle);
   }
 
   .navbar.top h3 {
