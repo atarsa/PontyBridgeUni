@@ -554,6 +554,7 @@ img {
   grid-template-columns: 1fr auto 1fr;
   grid-gap: 20px;
   align-items: center;
+  padding-bottom: 1em;
 
 }
 
@@ -790,6 +791,7 @@ h3 {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   grid-gap: 20px;
+  padding-bottom: 2em;
 }
 
 .research h2::before,
