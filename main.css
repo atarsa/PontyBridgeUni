@@ -380,8 +380,11 @@ template {
     ================================
 */
 :root {
-  --dark-purpurle: #791B99;
-  --light-purpurle: rgba(219, 195, 218, 0.5);
+  --dark-purple: #791B99;
+  --strong-purple: #9A55B2;
+  --light-purple: #A993FF;
+  --deep-yellow: #99881b;
+  --light-yellow: #D6CD91;
 }
 
 body {
@@ -395,26 +398,20 @@ body {
 }
 
 .navbar {
-  background-color: #791B99;
+  background: linear-gradient(to bottom, var(--strong-purple), var(--light-purple));
   color: #fff;
 }
 
 .navbar.bottom {
-  background-color: #9A55B2;
+  background: linear-gradient(to bottom, var(--light-purple), var(--strong-purple));
 }
-
-.liliac-background {
-  background-color: rgb(230, 214, 229);
-  margin-top: 0;
-}
-
 
 /*
-    =============================================
+    ===================================
 
     Links
 
-    =============================================
+    ===================================
 */
 a {
   text-decoration: none;
@@ -424,23 +421,26 @@ a {
 .study a,
 .research a,
 .news a {
-  color: #000;
+  color: rgb(56, 56, 56);
 }
 
-.study a:hover,
-.research a:hover,
-.news a:hover {
-
-  color: #791B99;
+a:hover {
+  color: var(--dark-purple);
 }
 
+.navbar a:hover {
+  color: rgb(56, 56, 56);
+  border-bottom: 3px solid var(--strong-purple);
+  display: inline-block;
+  transform: scale(1.2);
+}
 
 /*
-   ==============================================
+   ==============================
    
    Grid
 
-   ==============================================
+   ==============================
 */
 
 img {
@@ -464,7 +464,7 @@ img {
 
 }
 
-/*******
+/**************
   Homepage Grid
   *************/
 
@@ -536,20 +536,25 @@ img {
 
 }
 
-.student-img {
-  grid-area: student-img;
-  max-height: 200px;
-  border-radius: 50%;
-  border: 5px solid var(--dark-purpurle);
-  justify-self: center;
-}
+
 
 .news-section {
   display: grid;
   grid-template-areas:
-    ". news-1 news-2 news-3 .";
+    " . header-h3  header-h3 header-h3  ."
+    " . news-1 news-2 news-3 .";
   grid-gap: 1em;
   margin-bottom: 3em;
+}
+
+.news-section .heading {
+  grid-area: header-h3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 20px;
+  align-items: center;
+
 }
 
 .news-1 {
@@ -563,6 +568,20 @@ img {
 .news-3 {
   grid-area: news-3;
 }
+
+.news-section .heading::before,
+.news-section .heading::after {
+  display: block;
+  content: "";
+  height: 10px;
+  background: linear-gradient(to right, #D6CD91, rgba(214, 205, 145, 0));
+}
+
+.news-section .heading::before {
+  background: linear-gradient(to left, #D6CD91, rgba(214, 205, 145, 0));
+}
+
+
 
 /**********
   Study  and Research pages Grid
@@ -615,11 +634,11 @@ img {
 
 
 /*
-  ===============================================
+  =====================================
 
   Typography
 
-  ===============================================
+  =====================================
 */
 h1,
 h2,
@@ -655,9 +674,9 @@ h3 {
 }
 
 /*
-  ===============================================
+  =====================================
   Navigation
-  ===============================================
+  =====================================
 */
 
 .navbar {
@@ -718,7 +737,7 @@ h3 {
   margin: 0.3em 0;
   width: 9vw;
   height: 0.5vh;
-  background-color: #000;
+
 }
 
 
@@ -752,10 +771,6 @@ h3 {
 /********
  header
  *********/
-/* .hero-paragraph p {
-  text-indent: 0.5em;
-
-} */
 
 /*********
  Research and study
@@ -765,19 +780,49 @@ h3 {
 .study {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   justify-content: space-between;
 
 }
 
+.research h2,
+.study h2 {
+  display: inline-grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.research h2::before,
+.research h2::after,
+.study h2::before,
+.study h2::after {
+  display: block;
+  content: "";
+  height: 10px;
+  background: linear-gradient(to right, var(--light-yellow), rgba(214, 205, 145, 0));
+}
+
+.research h2::before,
+.study h2::before {
+  background: linear-gradient(to left, var(--light-yellow), rgba(214, 205, 145, 0));
+}
+
 .research h3,
 .study h3 {
-  border-bottom: 2px solid var(--dark-purpurle);
+  border-bottom: 2px solid var(--light-purple);
 }
 
 /*********
   student quote
  *********/
+.student-img {
+  grid-area: student-img;
+  max-height: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--deep-yellow);
+  justify-self: center;
+}
+
 q {
   font-size: 1.6em;
 }
@@ -788,7 +833,8 @@ q {
 }
 
 .student-quote {
-  background-color: rgba(219, 195, 218, 0.5);
+  /* background-color: var(--light-yellow); */
+  background: linear-gradient(to top right, var(--light-yellow), rgba(214, 205, 145, 0.377));
   padding: 1em;
 
 }
@@ -801,7 +847,6 @@ q {
 }
 
 .student-quote p {
-  color: #791B99;
   font-weight: bold;
 }
 
@@ -834,7 +879,7 @@ q {
 
 .news h3 {
 
-  border-bottom: 2px solid var(--dark-purpurle);
+  border-bottom: 2px solid var(--light-purple);
   justify-items: start;
   align-content: start;
   margin: 0;
@@ -854,6 +899,12 @@ q {
 
 }
 
+.study-header h1,
+.research-header h1 {
+  text-decoration: underline double var(--dark-purple);
+}
+
+
 .course img,
 .project img {
   min-height: 100%;
@@ -871,9 +922,15 @@ q {
 .item-2 h2,
 .item-2 p {
   padding-left: 1em;
+  padding-right: 0;
   justify-self: start;
   text-align: left;
 
+}
+
+.course h2,
+.project h2 {
+  border-bottom: 2px solid var(--dark-purple);
 }
 
 
@@ -906,6 +963,7 @@ q {
 
   .news-section {
     grid-template-areas:
+      " . header-h3 ."
       ". news-1 ."
       ". news-2 ."
       ". news-3 .";
@@ -961,8 +1019,17 @@ q {
     height: 50vh;
     grid-template-columns: 1fr;
     justify-items: center;
-    background-color: var(--dark-purpurle);
+    background: #fff;
+
   }
+
+  .show-menu a {
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    color: rgb(56, 56, 56);
+  }
+
+
 
   .navbar.top h3 {
     width: 30vw;
@@ -1009,6 +1076,11 @@ q {
   .course p,
   .project p {
     padding: 0;
+  }
+
+  .item-2 h2 {
+    padding-left: 0;
+    padding-right: 1em;
   }
 
 }
