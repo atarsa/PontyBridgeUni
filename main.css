@@ -139,7 +139,6 @@ img {
 body {
   font-family: 'Quattrocento Sans', sans-serif;
   font-size: 16px;
-  background: rgba(169, 147, 255, 0.1);
   font-kerning: normal;
   color: rgb(56, 56, 56);
 }
@@ -149,12 +148,19 @@ body * {
 }
 
 .navbar {
-  background: linear-gradient(to bottom, var(--strong-purple), var(--light-purple));
+  /* background: linear-gradient(to bottom, var(--strong-purple), var(--light-purple)); */
+  background-color: rgb(127, 112, 190);
   color: #fff;
 }
 
 .navbar.bottom {
   background: linear-gradient(to bottom, var(--light-purple), var(--strong-purple));
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Quattrocento', serif;
 }
 
 /*
@@ -172,7 +178,8 @@ a {
 .study a,
 .research a,
 .news a {
-  color: rgb(56, 56, 56);
+  /* color: rgb(56, 56, 56); */
+  color: #791B99;
 }
 
 a:hover {
@@ -180,10 +187,9 @@ a:hover {
 }
 
 .navbar a:hover {
-  color: rgb(56, 56, 56);
-  border-bottom: 2px solid var(--strong-purple);
-
+  font-weight: bold;
 }
+
 
 /*
    ==============================
@@ -386,38 +392,6 @@ img {
 
 /*
   =====================================
-
-  Typography
-
-  =====================================
-*/
-h1,
-h2,
-h3 {
-  font-family: 'Quattrocento', serif;
-}
-
-.study h3,
-.study p,
-.research h3,
-.research p,
-.news h3,
-.news p {
-  padding: 0.5em;
-
-}
-
-.study p,
-.research p,
-.news p,
-.project p,
-.course p {
-  text-align: justify;
-}
-
-
-/*
-  =====================================
   Navigation
   =====================================
 */
@@ -451,9 +425,9 @@ h3 {
 
 .top h3 {
   flex: 1 1 0;
+  align-self: center;
   max-width: 50vw;
   margin-left: 1em;
-  margin-top: 1em;
 }
 
 .menu-list-displayed {
@@ -466,7 +440,8 @@ h3 {
 }
 
 .menu-list-displayed li {
-  display: inline;
+  display: inline-block;
+  padding: 0.5em;
 
 }
 
@@ -501,7 +476,24 @@ h3 {
 /*
   ===============
   HomePage
-  ================
+  ================ 
+*/
+.study h3,
+.study p,
+.research h3,
+.research p,
+.news h3,
+.news p {
+  padding: 0.5em;
+}
+
+.study p,
+.research p,
+.news p,
+.project p,
+.course p {
+  text-align: justify;
+}
 
 /*********
  Main Section
@@ -539,9 +531,11 @@ h3 {
   background: linear-gradient(to left, var(--light-yellow), rgba(214, 205, 145, 0));
 }
 
-.research h3,
-.study h3 {
-  border-bottom: 2px solid var(--light-purple);
+.research h3:hover,
+.study h3:hover {
+  /* border-bottom: 2px solid var(--light-purple); */
+  background: linear-gradient(to left, var(--light-yellow), rgba(214, 205, 145, 0));
+  /* background-color: #A993FF; */
 }
 
 /**************
@@ -603,9 +597,12 @@ h3 {
   justify-items: start;
   align-content: start;
   margin: 0;
-  border-bottom: 2px solid var(--light-purple);
+
 }
 
+.news h3:hover {
+  background: linear-gradient(to right, var(--light-yellow), rgba(214, 205, 145, 0));
+}
 
 /*
   ==========================
