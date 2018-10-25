@@ -127,6 +127,7 @@ img {
 
     ================================
 */
+/* CSS Variables */
 :root {
   --dark-purple: #791B99;
   --strong-purple: #9A55B2;
@@ -140,6 +141,7 @@ body {
   font-size: 16px;
   background: rgba(169, 147, 255, 0.1);
   font-kerning: normal;
+  color: rgb(56, 56, 56);
 }
 
 body * {
@@ -179,9 +181,8 @@ a:hover {
 
 .navbar a:hover {
   color: rgb(56, 56, 56);
-  border-bottom: 3px solid var(--strong-purple);
-  display: inline-block;
-  transform: scale(1.1);
+  border-bottom: 2px solid var(--strong-purple);
+
 }
 
 /*
@@ -232,7 +233,6 @@ img {
   min-height: 400px;
   background-size: cover;
   background-position: center right;
-  color: #000;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -323,7 +323,10 @@ img {
 .news-section .heading::after {
   display: block;
   content: "";
-  height: 10px;
+  height: 5px;
+}
+
+.news-section .heading::after {
   background: linear-gradient(to right, #D6CD91, rgba(214, 205, 145, 0));
 }
 
@@ -333,9 +336,10 @@ img {
 
 
 
-/**********
+/*******************************
   Study  and Research pages Grid
-  ***********/
+  *******************************/
+
 .study_page.wrapper,
 .research_page.wrapper {
   display: grid;
@@ -352,11 +356,9 @@ img {
 
 .item-1,
 .item-3 {
-
   grid-template-areas:
     " item-img item-img item-name "
     " item-img item-img item-p ";
-
 }
 
 .item-2,
@@ -382,7 +384,6 @@ img {
 }
 
 
-
 /*
   =====================================
 
@@ -396,10 +397,6 @@ h3 {
   font-family: 'Quattrocento', serif;
 }
 
-
-
-/* TO DO: change for one class and add to html accordinly */
-.padding-05em,
 .study h3,
 .study p,
 .research h3,
@@ -410,18 +407,14 @@ h3 {
 
 }
 
-
-.justify,
 .study p,
 .research p,
-.news p {
+.news p,
+.project p,
+.course p {
   text-align: justify;
 }
 
-.text-align-right {
-  text-align: right;
-
-}
 
 /*
   =====================================
@@ -453,7 +446,7 @@ h3 {
 .bottom {
   bottom: 0;
   left: 0;
-  right: 0;
+
 }
 
 .top h3 {
@@ -477,22 +470,13 @@ h3 {
 
 }
 
-/* hide hamburger for desktop  */
+/*** hide hamburger for desktop  ***/
 .hamburger-menu {
   display: none;
 }
 
-/* Hamburger menu bars */
-.bar {
-  margin: 0.3em 0;
-  width: 9vw;
-  height: 0.5vh;
-
-}
-
 
 /*** Bottom navbar ***/
-
 
 .bottom ul {
   padding: 0;
@@ -515,15 +499,12 @@ h3 {
 }
 
 /*
-  ===============================================
-  Home
-  ===============================================
-/********
- header
- *********/
+  ===============
+  HomePage
+  ================
 
 /*********
- Research and study
+ Main Section
  ********/
 
 .research,
@@ -549,7 +530,7 @@ h3 {
 .study h2::after {
   display: block;
   content: "";
-  height: 10px;
+  height: 5px;
   background: linear-gradient(to right, var(--light-yellow), rgba(214, 205, 145, 0));
 }
 
@@ -563,9 +544,9 @@ h3 {
   border-bottom: 2px solid var(--light-purple);
 }
 
-/*********
-  student quote
- *********/
+/**************
+  Student quote
+ **************/
 .student-img {
   grid-area: student-img;
   max-height: 200px;
@@ -574,20 +555,14 @@ h3 {
   justify-self: center;
 }
 
-q {
-  font-size: 1.6em;
-}
-
 .student_quote_details p {
   justify-self: end;
   font-size: 1.2em;
 }
 
 .student-quote {
-  /* background-color: var(--light-yellow); */
   background: linear-gradient(to top right, var(--light-yellow), rgba(214, 205, 145, 0.377));
   padding: 1em;
-
 }
 
 .student-quote q {
@@ -595,6 +570,7 @@ q {
   padding: 0.5em 1em;
   text-align: right;
   font-style: italic;
+  font-size: 1.6em;
 }
 
 .student-quote p {
@@ -611,7 +587,6 @@ q {
     "news-img"
     "news-img"
     "news-details";
-
 }
 
 .news-img-box {
@@ -620,27 +595,22 @@ q {
   overflow: hidden;
 }
 
-.news-img-box img {
-  width: 100%;
-}
-
 .news-details {
   grid-area: news-details;
 }
 
 .news h3 {
-
-  border-bottom: 2px solid var(--light-purple);
   justify-items: start;
   align-content: start;
   margin: 0;
+  border-bottom: 2px solid var(--light-purple);
 }
 
 
 /*
-  ===============================================
+  ==========================
   Study and Research Pages
-  ===============================================
+  ==========================
 */
 .course,
 .project {
@@ -667,7 +637,6 @@ q {
 .project p,
 .project h2 {
   padding-right: 1em;
-
 }
 
 .item-2 h2,
@@ -676,7 +645,6 @@ q {
   padding-right: 0;
   justify-self: start;
   text-align: left;
-
 }
 
 .course h2,
@@ -685,13 +653,13 @@ q {
 }
 
 
-
 /* ====================
     Media Quieries
    ==================== */
 
 @media (max-width: 1000px) {
 
+  /* Homepage  */
   .welcome {
     grid-template-areas:
       " hero "
@@ -699,27 +667,26 @@ q {
   }
 
 
-  /*****.
-    don't display student photo on smaller screens
-    *******/
+  /*****************************
+    don't display student photo
+    on smaller screens
+    *****************************/
   .student-quote {
     display: grid;
     grid-template-areas: "quote";
-
   }
 
   .student-img-displayed {
     display: none;
   }
 
+  /* news section grid */
   .news-section {
     grid-template-areas:
       " . header-h3 ."
       ". news-1 ."
       ". news-2 ."
       ". news-3 .";
-
-
   }
 
   .news {
@@ -765,7 +732,7 @@ q {
   .show-menu {
     display: grid;
     position: absolute;
-    top: 6vh;
+    top: 5.5vh;
     width: 100vw;
     height: 50vh;
     grid-template-columns: 1fr;
@@ -777,15 +744,13 @@ q {
   .show-menu a {
     padding: 0.5em 1em;
     font-size: 1.5em;
-    color: rgb(56, 56, 56);
+    /* color: rgb(56, 56, 56); */
+    color: #791B99;
   }
-
-
 
   .navbar.top h3 {
     width: 30vw;
     align-self: center;
-
   }
 
   /******
@@ -796,7 +761,6 @@ q {
       "study "
       "research ";
   }
-
 
   .study img,
   .research img {
@@ -817,11 +781,9 @@ q {
 
   .course,
   .project {
-
     margin: 2rem auto;
     justify-items: start;
     align-items: center;
-
   }
 
   .course p,
@@ -842,6 +804,11 @@ q {
     max-width: 40vw;
   }
 
+  /********* 
+    Homepage
+   ********/
+
+  /* smaller university picture for background */
   .hero {
     min-height: 20em;
     background: white url(img/univesity-building_na0ooe_ar_4_3\,c_fill\,g_auto__c_scale\,w_509.jpg);
@@ -863,13 +830,10 @@ q {
   .news-img-box {
     grid-column: 1 / 2;
     width: 100%;
-
   }
 
   .news-details {
     grid-column: 1 / 1;
     grid-row: 3;
   }
-
-
 }
