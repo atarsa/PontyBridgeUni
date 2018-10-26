@@ -18,27 +18,33 @@
     <div class="flex-wrapper">
       <h3><a href="index.html">University of PontyBridge</a>
       </h3>
-
-      <ul id="menu" class="menu-list-displayed " onclick="displayMenu()">
-        <li>
-          <a href="index.html" target="blank">About</a>
-        </li>
-        <li>
-          <a href="#news">News</a>
-        </li>
-        <li>
-          <a href="study.html" target="blank">Study</a>
-        </li>
-        <li>
-          <a href="research.html" target="blank">Research</a>
-        </li>
-      </ul>
-
       <!-- bars icon from fontawsome.com
       https://fontawesome.com/icons/bars?style=solid
     accesssed 24/10/2018 -->
-      <div class="hamburger-menu" onclick="displayMenu()">
-        <i class="fas fa-bars"></i></div>
+      <input type="checkbox" id="menuToggler" class="input-toggler">
+      <label for="menuToggler" class="menu-toggler">
+        <span class="hamburger-menu">
+          <i class="fas fa-bars"></i>
+        </span>
+      </label>
+      <div id="show-menu">
+        <ul class="menu-list-displayed ">
+          <li>
+            <a href="index.html" target="blank">About</a>
+          </li>
+          <li>
+            <a href="#news">News</a>
+          </li>
+          <li>
+            <a href="study.html" target="blank">Study</a>
+          </li>
+          <li>
+            <a href="research.html" target="blank">Research</a>
+          </li>
+        </ul>
+      </div> <!-- end #show-menu-->
+
+
     </div> <!-- end of .flex-wrapper-->
   </nav>
 
@@ -236,9 +242,6 @@ image_link: https://www.flickr.com/photos/jamesclay/9339494709/
     </div>
   </footer>
 
-  <script src="scripts.js">
-
-  </script>
 </body>
 
 </html>

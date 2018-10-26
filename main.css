@@ -211,7 +211,6 @@ img {
   flex-flow: row wrap;
   justify-content: space-between;
   margin: auto;
-
 }
 
 /**************
@@ -393,7 +392,7 @@ img {
 .navbar {
   position: relative;
   width: 100vw;
-  min-height: 8vh;
+  height: 10vh;
   z-index: 1;
 
 }
@@ -438,6 +437,11 @@ img {
   display: inline-block;
   padding: 0.5em;
 
+}
+
+/*** hide checkbox  ***/
+input[type="checkbox"] {
+  display: none;
 }
 
 /*** hide hamburger for desktop  ***/
@@ -716,23 +720,32 @@ img {
     display: inline-block;
   }
 
-  .show-menu {
-    display: grid;
+  input[type="checkbox"]:checked~#show-menu {
+    display: block;
     position: absolute;
-    top: 5.5vh;
+    top: 10vh;
+    right: 0;
     width: 100vw;
-    height: 50vh;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    background: #fff;
+    height: 100vh;
+    transition: transform 1250ms ease-in-out;
+    background: linear-gradient(to bottom, rgb(127, 112, 190), #9A55B2);
+  }
+
+  input[type="checkbox"]:checked~#show-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.5em;
+    color: #fff;
 
   }
 
-  .show-menu a {
-    padding: 0.5em 1em;
-    font-size: 1.5em;
-    /* color: rgb(56, 56, 56); */
-    color: #791B99;
+  input[type="checkbox"]:checked~#show-menu li:hover {
+    border-bottom: 1px solid #000;
+  }
+
+  input[type="checkbox"]:checked~#show-menu a:hover {
+    color: #fff;
   }
 
   .navbar.top h3 {
