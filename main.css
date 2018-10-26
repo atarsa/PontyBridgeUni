@@ -480,14 +480,6 @@ img {
   padding: 0.5em;
 }
 
-.study p,
-.research p,
-.news p,
-.project p,
-.course p {
-  text-align: justify;
-}
-
 /*********
  Main Section
  ********/
@@ -499,7 +491,6 @@ img {
   justify-content: space-between;
 
 }
-
 
 .research_details h3:hover,
 .study_details h3:hover {
