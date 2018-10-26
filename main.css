@@ -720,6 +720,11 @@ input[type="checkbox"] {
     display: inline-block;
   }
 
+  /***
+  Credits to Jelena Jovanovic
+  code_link: https://www.cssscript.com/css-hamburger-toggle-menu/ 
+  accessed on 26/10/2018
+  ***/
   input[type="checkbox"]:checked~#show-menu {
     display: block;
     position: absolute;
