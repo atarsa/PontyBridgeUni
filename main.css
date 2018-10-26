@@ -311,7 +311,12 @@ img {
   grid-area: news-3;
 }
 
-/* add credits to wes bos */
+/****
+ code example from CSS grid course by Wes Bos, lesson 24: Responsive Website
+ lesson_link: https://courses.wesbos.com/account/access/5bcae091a0d03125a76e1ad6/view/249566909 
+ modified colour and height of blocks
+ ****/
+
 .news-section .heading::before,
 .news-section .heading::after {
   display: block;
