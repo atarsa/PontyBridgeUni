@@ -690,12 +690,12 @@ img {
   .show-menu {
     display: grid;
     position: absolute;
-    top: 5.5vh;
+    top: 5vh;
     width: 100vw;
     height: 50vh;
     grid-template-columns: 1fr;
     justify-items: center;
-    background: #fff;
+    background: rgb(255, 255, 255);
 
   }
 
