@@ -127,14 +127,6 @@ img {
 
     ================================
 */
-/* CSS Variables */
-:root {
-  --dark-purple: #791B99;
-  --strong-purple: #9A55B2;
-  --light-purple: #A993FF;
-  --deep-yellow: #99881b;
-  --light-yellow: #D6CD91;
-}
 
 body {
   font-family: 'Quattrocento Sans', sans-serif;
@@ -177,7 +169,7 @@ a {
 }
 
 a:hover {
-  color: var(--dark-purple);
+  color: #791B99;
 }
 
 .navbar a:hover {
@@ -319,6 +311,7 @@ img {
   grid-area: news-3;
 }
 
+/* add credits to wes bos */
 .news-section .heading::before,
 .news-section .heading::after {
   display: block;
@@ -502,30 +495,11 @@ img {
 
 }
 
-.research-img-box,
-.study-img-box {
-  position: relative;
-}
-
-.research-img-box h3,
-.study-img-box h3 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  background: rgba(155, 85, 178, 0.671);
-}
-
-.research-img-box img,
-.study-img-box img {
-  min-height: 100%;
-}
 
 .research_details h3:hover,
 .study_details h3:hover {
-  /* border-bottom: 2px solid var(--light-purple); */
-  background: linear-gradient(to left, var(--light-yellow), rgba(214, 205, 145, 0));
-  /* background-color: #A993FF; */
+  background: linear-gradient(to left, #D6CD91, rgba(214, 205, 145, 0));
+
 }
 
 /**************
@@ -535,7 +509,7 @@ img {
   grid-area: student-img;
   max-height: 200px;
   border-radius: 50%;
-  border: 5px solid var(--deep-yellow);
+  border: 5px solid #99881b;
   justify-self: center;
 }
 
@@ -545,7 +519,7 @@ img {
 }
 
 .student-quote {
-  background: linear-gradient(to top right, var(--light-yellow), rgba(214, 205, 145, 0.377));
+  background: linear-gradient(to top right, #D6CD91, rgba(214, 205, 145, 0.377));
   padding: 1em;
 }
 
@@ -591,7 +565,7 @@ img {
 }
 
 .news h3:hover {
-  background: linear-gradient(to right, var(--light-yellow), rgba(214, 205, 145, 0));
+  background: linear-gradient(to right, #D6CD91, rgba(214, 205, 145, 0));
 }
 
 /*
@@ -609,7 +583,7 @@ img {
 
 .study-header h1,
 .research-header h1 {
-  text-decoration: underline double var(--dark-purple);
+  text-decoration: underline double #791B99;
 }
 
 
@@ -636,7 +610,7 @@ img {
 
 .course h2,
 .project h2 {
-  border-bottom: 2px solid var(--dark-purple);
+  border-bottom: 2px solid #791B99;
 }
 
 
@@ -731,7 +705,6 @@ img {
   .show-menu a {
     padding: 0.5em 1em;
     font-size: 1.5em;
-    /* color: rgb(56, 56, 56); */
     color: #791B99;
   }
 
