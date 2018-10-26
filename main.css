@@ -140,7 +140,7 @@ body * {
 }
 
 .navbar {
-  background-color: rgb(127, 112, 190);
+  background-color: #6f5fb9;
   color: #fff;
 }
 
@@ -160,6 +160,7 @@ h3 {
 a {
   text-decoration: none;
   color: #fff;
+  font-size: 1.1em;
 }
 
 .study a,
